@@ -69,10 +69,11 @@ nav ul li a:hover, a.active{
 .plus-minus-btn{
     color: #3352F2;
     font-size: 20px;
-    padding: 5px;
+    padding: 10px;
     margin-top: 15px;
     word-spacing: 20px;
     cursor: pointer;
+    background: none;
 }
 .plus-minus-btn:hover{
  background-color: gray;
@@ -113,6 +114,10 @@ button{
     font-weight: 400;
     margin-bottom: 25px;
 }
+.btnItam{
+    display: flex;
+    padding: 2px;
+}
 
 .btn-style{
     display: block;
@@ -132,6 +137,10 @@ button{
     display: none;
 }
 #thankYou{
+    font-size: 60px;
+    justify-content: center;
+    text-align: center;
     margin: 100px;
     padding: 100px;
+    background-color: white;
 }
