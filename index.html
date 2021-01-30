@@ -151,15 +151,10 @@
           function calculateTotal (){
             const firstClass = getInputValue('firstClass');
             const economy = getInputValue('economy');
-
-
-          const totalBooking = firstClass * 150 + economy * 100;
-          document.getElementById('total-value').innerText = totalBooking
-
-
-            const totalTex = Math.round(totalBooking * 0.1);
+            const totalBooking = firstClass * 150 + economy * 100;
+            document.getElementById('total-value').innerText = totalBooking
+             const totalTex = Math.round(totalBooking * 0.1);
             document.getElementById("tex").innerText = totalTex;
-           
             const greenTotal = totalBooking - totalTex;
             document.getElementById('greenTotal').innerText = greenTotal
         }
@@ -177,7 +172,7 @@
        })
        
     </script>
-
+           <!-- End flight Discover -->
         <!-- Thank you  -->
 
     <script src="/js/all.js"></script>
