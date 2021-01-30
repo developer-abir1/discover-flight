@@ -80,6 +80,7 @@ nav ul li a:hover, a.active{
 }
 button{
     border: none;
+    cursor: pointer;
 }
 .booking-form  .calculations{
     margin: 10px 0;
@@ -134,13 +135,54 @@ button{
     justify-content: space-between;
 }
 #thankYou{
-    display: none;
+    display:none ;
 }
 #thankYou{
-    font-size: 60px;
+    font-size: 10px;
     justify-content: center;
     text-align: center;
     margin: 100px;
     padding: 100px;
     background-color: white;
+}
+#thankYou p{
+ color: grey;
+ font: 2em sans-serif;
+}
+
+
+
+h3{
+    color: green;
+    font: 3em sans-serif;
+}
+table {
+    border-collapse: collapse;
+}
+.table-border {
+    border: 1px solid #dee2e6;
+}
+
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+}
+.table-border td,
+.table-border th {
+    border: 1px solid #dee2e6;
+}
+
+.table td,
+.table th {
+    padding: 0.75rem;
+    vertical-align: top;
+}
+
+.twopx td {
+    vertical-align: top;
+    border-top: 2px solid #dee2e6;
+}
+.font-size {
+    font-weight: 500;
 }

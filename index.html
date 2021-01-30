@@ -32,23 +32,23 @@
     <section id="display">
     <main class="main-content container">
         <div class="booking-form">
-            <h3>Booking Flights</h3>
+            <h1>Booking Flights</h1>
             <div class="input-group">
                 <label for="">Flying From</label>
-                <input class="inp-style" type="text" name="" placeholder="Dhake, Bangladesh">
+                <input id="from-flying" class="inp-style" type="text" name="" placeholder="Dhaka, Bangladesh">
             </div>
             <div class="input-group">
                 <label for="">Flying To</label>
-                <input class="inp-style" type="text" name="" placeholder="New York, United States">
+                <input id="to-flying" class="inp-style" type="text" name="" placeholder="New York, United States">
             </div>
             <div class="inputs">
                 <div class="input-group">
                     <label" for="">Departure</label>
-                    <input class="inp-style" type="date" name="">
+                    <input id="departure" class="inp-style" type="date" name="">
                 </div>
                 <div class="input-group">
                     <label for="">Return</label>
-                    <input class="inp-style" type="date" name="">
+                    <input id="return" class="inp-style" type="date" name="">
                 </div>
             </div>
             <div class="input-group f-class">
@@ -116,15 +116,58 @@
 
     <section>
         <div id="thankYou">
-           <div>
-               <h1>Thank You </h1>
-               <h1>
-                   🌹 🌹 🌹 🌹
-                   ❤️ ❤️
-               </h1>
-                   
-           </div>
-        </div>
+            <div>
+                <h3>Successfully Booking Your flight</h3>
+                <p>Detail information </p>
+            </div>
+          
+           <table class="table table-border">
+                
+            <tbody>
+
+              <tr>
+                <td class="font-size">Flying From</td>
+                <td id="from-name"></td>
+              </tr>
+
+              <tr>
+                <td class="font-size">Flying To</td>
+                <td id="to-flying"></td>
+              </tr>
+
+              <tr>
+                <td class="font-size">Departure</td>
+                <td id="departure"></td>
+              </tr>
+
+              <tr>
+                <td class="font-size">Return</td>
+                <td id="return"></td>
+              </tr>
+              <tr>
+                <td class="font-size">First Class</td>
+                <td><span id="firstClass-count"></span> Tickets</td>
+              </tr>
+              <tr>
+                <td class="font-size">Economy</td>
+                <td><span id="economy-count"></span> Tickets</td>
+              </tr>
+              <tr class="twopx">
+                <td class="font-size">Subtotal</td>
+                <td> $ <span id="total-value"></span></td>
+              </tr>
+              <tr>
+                <td class="font-size">Vat</td>
+                <td> $ <span id="tex"></span></td>
+              </tr>
+              <tr>
+                <td class="font-size">Total</td>
+                <td > $ <span id="greenTotal"></span></td>
+              </tr>
+              
+            </tbody>
+          </table>
+           <button class="btn-style">Confrom Book</button>
     </section>
 
     <!--Thank You-->
@@ -153,11 +196,11 @@
           
              document.getElementById('total-value').innerText = totalBooking;
              calculateTotal();
-        }
+         }
 
             //  greenTotal value
 
-          function calculateTotal (){
+           function calculateTotal (){
             const firstClass = getInputValue('firstClass');
             const economy = getInputValue('economy');
             const totalBooking = firstClass * 150 + economy * 100;
@@ -169,17 +212,20 @@
         }
             
 
-        function getInputValue (booking){
+            function getInputValue (booking){
             const bookingInput = document.getElementById(booking + '-count');
             const bookingNumber = parseInt(bookingInput.value);
             return bookingNumber;
-        }
+         }
+
+            document.getElementById("bookBtn").addEventListener("click", function(){
+            const displayNone = document.getElementById("display").style.display = "none";
+            document.getElementById("thankYou").style.display = "block";
+            })
         
-       document.getElementById("bookBtn").addEventListener("click", function(){
-         const displayNone = document.getElementById("display").style.display = "none";
-         document.getElementById("thankYou").style.display = "block";
-       })
-       
+  
+
+    
     </script>
            <!-- End flight Discover -->
         <!-- Thank you  -->
